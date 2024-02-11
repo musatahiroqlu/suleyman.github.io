@@ -1,0 +1,26 @@
+.my-button{
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+.button-danger{
+    background-color: red;
+}
+.button-primary{
+    background-color: blue;
+}
+.button-secondary{
+    background-color: black;
+}
+.button-warning{
+    background-color: yellow;
+}
+.button-success{
+    background-color: green;
+}
+.my-button:hover{
+    color:rgb(185, 134, 71)
+}

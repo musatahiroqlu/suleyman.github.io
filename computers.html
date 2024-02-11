@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komputerler</title>
+    <link rel="stylesheet" href="css/computers.css" />
+  </head>
+  <body>
+    <button class="new-computer-button" onclick="onNewComputer()">Yeni Kompyuter</button>
+    <a href="index.html">Esas sehif</a>
+    <span id="username-label"></span>
+    <button onclick="onLogout()">Cixis</button>
+    <input type="text" id="search-input" placeholder="Axtaris" 
+    oninput="onSearch(event)">
+    <input onkeydown="onSearchEnter(event)" placeholder="Axtaris-Enter">
+    <table id="computers-table">
+      <caption>
+        Komputer siyahisi
+      </caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>MARKA</th>
+          <th>MODEL</th>
+          <th>RAM</th>
+          <th>Sekil</th>
+          <th>Emeliyatlar</th>
+        </tr>
+      </thead>
+      <tbody id="computers-tbody">
+       
+        <!-- 
+        <tr>
+          <td>1</td>
+          <td>Hp</td>
+          <td>Pavilioun 15</td>
+          <td>12</td>
+          <td><img class="computer-image" src="images/asus.jpg"
+            onclick="onComputerImageSelected('images/asus.jpg')" /></td>
+          <td>
+            <button class="delete-button">Sil</button>
+            <button class="edit-button">Redakte</button>
+          </td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+    <div id="computer-image-modal">
+      <div id="computer-image-modal-content">
+        <img id="computer-image-element" />
+      </div>
+    </div>
+    <script src="js/computers.js"></script>
+  </body>
+</html>

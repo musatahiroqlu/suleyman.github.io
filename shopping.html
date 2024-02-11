@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alis-veris</title>
+</head>
+<body>
+<style>
+    .computer-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+        }
+        img{
+          width: 50%;
+          height: 200px;
+        }
+</style>
+
+<h1>Computer List</h1>
+
+<div id="computerList"></div>
+
+<script>
+ 
+    var computers = JSON.parse(localStorage.getItem('computers')) || [];
+
+    var computerListContainer = document.getElementById('computerList');
+
+   
+    for (var i = 0; i < computers.length; i++) {
+        var computer = computers[i];
+
+       
+        var cardHTML = `
+      <div class="computer-card"> 
+        <h2> ${computer.brand}</h2>
+        <p><strong>Model</strong> ${computer.model} </p>
+        <img src="${computer.imagePath}" > 
+        </div>  
+        `;
+
+        
+        computerListContainer.innerHTML += cardHTML;
+    }
+</script>
+    <!-- <script src="js/shopping.js" ></script> -->
+</body>
+</html>
